@@ -1,0 +1,1051 @@
+@import './common/base.scss';
+@import './common/icons.scss';
+
+.detail-intra {
+  padding: 70px 0;
+  color: $black65;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 42px;
+  text-align: center;
+  p {
+    margin: 0 auto;
+    white-space: pre-wrap;
+    &.pic {
+      margin: 30px auto 0;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.only-pics {
+  margin: 0 auto;
+  text-align: center;
+  img {
+    width: 100%;
+  }
+}
+
+.only-text {
+  padding: 32px 48px;
+  margin: 0 auto;
+}
+
+.detail-item {
+  // 上间距60，下间距70，items有margin-bottom: 30, 所以这里是40
+  padding: 60px 0 40px;
+  h3 {
+    padding-bottom: 24px;
+    color: $black85;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: center;
+  }
+  .dot-line {
+    width: 174px;
+    display: block;
+    margin: 0 auto;
+  }
+  .items-tit {
+    color: $black65;
+    font-size: 18px;
+    margin: 40px auto 0;
+    text-align: center;
+    width: 78%;
+    &.w65 {
+      width: 65%;
+    }
+    &.w78 {
+      width: 78%;
+    }
+  }
+  .intra-pic {
+    margin-top: 40px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.case {
+  overflow: hidden;
+  position: relative;
+  &::before, &::after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  &::before {
+    width: 864px;
+    top: 0;
+    left: 0;
+    background-image: url("../image/common/bg-left.png");
+    background-position: top left;
+    background-size: 100%;
+  }
+  &::after {
+    width: 755px;
+    top: 0;
+    right: 0;
+    background-image: url("../image/common/bg-right.png");
+    background-position: top right;
+    background-size: 100%;
+  }
+  .items-tit {
+    font-size: 22px;
+  }
+  .items {
+    position: relative;
+    z-index: 5;
+  }
+  &.service {
+    .items-tit {
+      font-size: 18px;
+    }
+  }
+}
+
+.items { //.detail-con
+  @extend %flex;
+  padding-top: 40px;
+  box-sizing: border-box;
+  .item {
+    margin-bottom: 30px;
+    box-sizing: border-box;
+  }
+  .pic {
+    img {
+      height: 100%;
+    }
+  }
+  h4 {
+    color: $black;
+    font-weight: 600;
+  }
+  .text {
+    color: $black65;
+    line-height: 24px;
+  }
+}
+// 左图右文字
+.itemsA {
+  .item {
+    @extend %box;
+    width: $cols;
+    display: flex;
+    margin-bottom: 30px;
+    padding: 0 50px;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .pic {
+    width: 220px;
+    align-self: flex-start;
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+  .info {
+    flex: 1;
+    margin-left: 50px;
+    padding: 34px 0;
+    h4 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      white-space: pre-wrap;
+    }
+    h5 {
+      margin-top: 20px;
+      color: $black;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 34px;
+    }
+    .text {
+      font-size: 16px;
+      line-height: 34px;
+      white-space: pre-wrap;
+      span {
+        flex: 1;
+      }
+    }
+  }
+  &-btn {
+    padding-right: 30px;
+    .text {
+      display: flex;
+      span {
+        flex: 1;
+      }
+      .btn {
+        @extend %buttonBlue;
+        margin-left: 20px;
+        align-self: flex-end;
+      }
+    }
+    .tips {
+      border-top: 1px solid #C6C5D0;
+      margin-top: 24px;
+      padding-top: 16px;
+      color: $gray-smoke;
+      font-size: 16px;
+      line-height: 32px;
+      text-align: right;
+      a {
+        color: $blue;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+// 带小圆图的4列
+.itemsB {
+  .item {
+    @extend %box;
+    width: $cols4;
+    padding: 20px 28px;
+    position: relative;
+  }
+  .pic {
+    height: 60px;
+    margin-bottom: 12px;
+    &.xs {
+      height: 40px;
+    }
+    &.s {
+      height: 32px;
+    }
+    &.l {
+      height: 128px;
+      margin-bottom: 24px;
+    }
+  }
+  h4 {
+    font-size: 22px;
+  }
+  .text {
+    margin-top: 14px;
+    font-size: 14px;
+    white-space: pre-wrap;
+  }
+  .tips {
+    width: 100%;
+    color: $black65;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .more {
+    border-top-left-radius: 100px;
+    padding: 5px 6px 5px 33px;
+    color: $blue;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: $bgBlue;
+    .icon {
+      margin-left: 15px;
+      background-image: url("../image/common/icon-more-blue.png");
+    }
+    &:hover {
+      color: $white;
+      background: $blue;
+      .icon {
+        background-image: url("../image/common/icon-more.png")
+      }
+    }
+  }
+  &-tc {
+    .pic {
+      text-align: center;
+    }
+    h4 {
+      text-align: center;
+    }
+  }
+  &-lc {
+    justify-content: center;
+    .item {
+      margin-left: 13px;
+      margin-right: 13px;
+      &:nth-child(4n) {
+        // margin-right: 0;
+      }
+      
+    }
+  }
+  &-cols3-l {
+    .item {
+      width: $cols3;
+    }
+  }
+  &-cols3-s {
+    width: 935px;
+    margin: 0 auto;
+  }
+  &-vertical {
+    .item {
+      display: flex;
+      width: $cols2-l;
+      padding: 35px 50px;
+      .pic {
+        // height: 88px;
+        // width: 88px;
+        margin-right: 30px;
+        align-self: flex-start;
+        &.s {
+          height: 60px;
+          width: 60px;
+        }
+        &.l {
+          height: 88px;
+          width: 88px;
+        }
+      }
+      h4 {
+        font-size: 24px;
+      }
+      .text {
+        font-size: 16px;
+      }
+
+      &.item-s {
+        padding: 42px 28px;
+        .pic {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  &-vertical-s {
+    .item {
+      width: $cols4;
+    }
+  }
+  // 新一代服务标题小字
+  &.service {
+    h4 {
+      font-size: 18px;
+    }
+  }
+}
+
+// 上大图下文字
+.itemsC {
+  .item {
+    flex: 1;
+    text-align: center;
+  }
+  .pic {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin-bottom: 36px;
+    vertical-align: top;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  .text {
+    font-size: 16px;
+    span {
+      color: $blue;
+    }
+  }
+}
+// 纯图片链接
+.itemsD {
+  width: 723px;
+  margin: 0 auto;
+  justify-content: center;
+  .item {
+    @extend %box;
+    width: 220px;
+    margin: 0 10px 20px;
+  }
+  .pic {
+    height: 85px;
+  }
+}
+// 带动效大图加说明，it-consult
+.itemsE {
+  .item {
+    height: 200px;
+    width: $cols3;
+    background-color: rgba(27,209,209,0.06);
+    background-image: url(../image/common/flower.png);
+    background-position: top right;
+    background-size: 120px;
+    background-repeat: no-repeat;
+    display: flex;
+    position: relative;
+  }
+  .pic {
+    flex: 1;
+    width: 177px;
+    align-self: flex-end;
+    img {
+      width: 100%;
+    }
+  }
+  .info {
+    flex: 1;
+    padding: 0 29px 17px 10px;
+    align-self: flex-end;
+    color: #757575;
+    font-size: 14px;
+  }
+}
+
+// 仅title带链接
+.itemsF {
+  .item {
+    width: $cols5;
+    display: table;
+    height: 74px;
+    text-align: center;
+    position: relative;
+    h4 {
+      width: 100%;
+      display: table-cell;
+      color: $blue;
+      vertical-align: middle;
+    }
+    span.icon {
+      height: 10px;
+      width: 21px;
+      position: absolute;
+      right: 6px;
+      bottom: 11px;
+    }
+  }
+}
+// 压测宝 pressuer 服务流程
+.itemsG {
+  .item {
+    width: 186px;
+    margin-left: 152px;
+    text-align: center;
+    &:first-child {
+      margin-left: 0;
+      .pic::before {
+        display: none;
+      }
+    }
+  }
+  .pic {
+    width: 100%;
+    position: relative;
+    img {
+      height: auto;
+      width: 100%;  
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      height: 25px;
+      width: 78px;
+      background-image: url("../image/product/icon-arrow.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: absolute;
+      top: 61%;
+      left: -61%;
+    }
+  }
+  h4 {
+    margin-top: 52px;
+    font-size: 24px;
+  }
+  .text {
+    margin-top: 18px;
+    white-space: pre-wrap;
+  }
+}
+
+// 监控宝 monitor 文档与工具
+.itemsH {
+  .item {
+    @extend %box;
+    width: $cols4;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .pic {
+    height: 132px;
+    padding: 26px 0;
+    background: $bgBlue; 
+  }
+  h4 {
+    margin-top: 22px;
+    color: $blue;
+    font-size: 24px;
+    font-weight: normal;
+    .icon {
+      margin-left: 12px;
+    }
+  }
+  .text {
+    margin-top: 5px;
+    color: $black;
+    font-size: 14px;
+    line-height: 32px;
+  }
+}
+
+// isop 
+.itemsI {
+  .item {
+    @extend %box;
+    width: $cols3;
+    padding-bottom: 30px;
+  }
+  .pic {
+    width: 100%;
+    margin-bottom: 20px;
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+  h4 {
+    margin-bottom: 20px;
+    color: $black85;
+    font-size: 24px;
+    text-align: center;
+  }
+  .text {
+    padding: 0 28px;
+    color: $black65;
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+// consult 图文列表
+.itemsJ {
+  .item {
+    width: $cols;
+    margin-top: 100px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    .item-box {
+      @extend %box;
+      width: 60%;
+      margin-top: 112px;
+      padding: 65px 0 65px 70px;
+      float: right;
+      overflow: hidden;
+      h4 {
+        color: $black;
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 30px;
+      }
+      li {
+        color: $black65;
+        font-size: 24px;
+        line-height: 60px;
+      }
+    }
+    &:first-child {
+      margin: 0;
+    }
+    &:nth-child(2n) {
+      background-position: top right;
+      .item-box {
+        float: left;
+      }
+    }
+  }
+}
+// consult 文字表格
+.itemsK {
+  .item {
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: rgba($color: $blue, $alpha: .08);
+    h4 {
+      margin-bottom: 30px;
+      font-size: 28px;
+      text-align: center;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        @extend %box;
+        width: 236px;
+        margin: 22px 20px;
+        font-size: 18px;
+        line-height: 72px;
+        text-align: center;
+        flex: auto;
+      }
+    }
+  }
+}
+
+// cmdb team 用于consult
+.itemsL {
+  .item {
+    @extend %box;
+    width: $cols3;
+    display: flex;
+    margin-top: 30px;
+    position: relative;
+  }
+  .item-left {
+    padding-top: 80px;
+    width: 25%;
+    background: $bgBlue;
+    color: $black85;
+    font-size: 48px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .item-right {
+    flex: 1;
+    padding: 12px;
+  }
+  h4 {
+    color: $black;
+    font-size: 18px;
+    line-height: 25px;
+    position: absolute;
+    top: -30px;
+  }
+  h5, .text {
+    color: $black65;
+    font-size: 14px;
+  }
+  h5 {
+    margin-top: 10px;
+    font-weight: 600;
+  }
+}
+// cmdb team 用于consult
+.itemsM {
+  .item {
+    width: 100%;
+    margin-bottom: 40px;
+    h4 {
+      margin-bottom: 30px;
+      color: $black85;
+      font-size: 32px;
+      line-height: 32px;
+    }
+    .text {
+      @extend %box;
+      width: 100%;
+      padding: 30px;
+      box-sizing: border-box;
+      color: $black65;
+      font-size: 18px;
+      line-height: 36px;
+    }
+  }
+}
+
+// 仅一大图 用于 it-consult
+.itemsPic {
+  .pic {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  &.s .pic{
+    width: 67%;
+    margin: 0 auto
+  }
+}
+// 仅文字 团队介绍 用于 it-consult
+.itemsText {
+  width: 80%;
+  margin: 40px auto 30px;
+  padding: 32px 48px;
+  color: rgba(0,0,0,0.65);
+  font-size: 16px;
+  line-height: 34px;
+  text-align: center;
+  background: $bgBlue;
+}
+
+// tab start
+.tab-tit {
+  width: 780px;
+  margin: 0 auto;
+}
+.outBox {
+  margin-top: 40px;
+}
+$border: 1px solid rgba($color: #C6C5D0, $alpha: .61);
+.main-tabs ul {
+  width: 100%;
+  display: flex;
+  border: $border;
+  border-bottom: 0;
+  margin-bottom: 20px;
+  li {
+    flex: 1;
+    border-right: $border;
+    border-bottom: $border;
+    color: $black;
+    text-align: center;
+    line-height: 72px;
+    box-sizing: border-box;
+    cursor: pointer;
+    &.on {
+      color: $blue;
+      font-weight: bold;
+      background-color: $bgBlue;
+    }
+    i {
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+      margin-right: 12px;
+      vertical-align: middle;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) i {
+        background-image: url("../image/product/icon-0#{$i}.png");
+      }
+      &:nth-child(#{$i}).on i {
+        background-image: url("../image/product/icon-0#{$i}-active.png");
+      }
+    }
+  }
+}
+.main-tabcon {
+  @extend %box;
+  background: $white;
+  overflow: hidden;
+  .tabcon-title {
+    border-bottom: 1px solid rgba($color: #C6C5D0, $alpha: .61);
+    margin: 0 auto;
+    color: $black;
+    font-size: 20px;
+    line-height: 75px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .tabcon-con {
+    min-height: 476px;
+    display: flex;
+    background-image: url("../image/product/bg-01.png");
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: bottom right;
+    overflow: hidden;
+  }
+}
+.sub-tabs {
+  width: 25%;
+  padding-top: 24px;
+  border-right: 1px solid rgba($color: #C6C5D0, $alpha: .61);
+  overflow-y: scroll;
+  li {
+    display: block;
+    width: 100%;
+    padding-left: 54px;
+    line-height: 60px;
+    color: $black65;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+    &.on {
+      color: $blue;
+      background-color: rgba($color: #1BD1D1, $alpha: .08);
+    }
+  }
+}
+.sub-tabcon {
+  flex: 1;
+  padding: 6%;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  overflow-y: scroll;
+  img {
+    margin-bottom: 20px;
+  }
+  .tc {
+    color: $black65;
+    text-align: center;
+    font-size: 14px;
+    img {
+      margin :0 auto;
+    }
+  }
+  .sub-item-span {
+    text-align: left;
+    span {
+      display: inline-block;
+      width: 20%;
+      margin-bottom: 6px;
+      vertical-align: middle;
+    }
+  }
+}
+// tab end
+
+// swiper start
+.swiper-wrap {
+  margin-top: 40px;
+  padding-bottom: 30px;
+  .hd {
+    position: relative;
+    .icon {
+      position: absolute;
+      top:  100px;
+    }
+    .icon-arrow-prev {
+      left: -50px;
+    }
+    .icon-arrow-next {
+      right: -50px;
+    }
+    ul {
+      position: absolute;
+      top: 412px;
+      left: 50%;
+      transform: translateX(-50%);
+      overflow: hidden;
+      z-index: 5;
+      li {
+        height: 6px;
+        width: 60px;
+        float: left;
+        border-radius: 3px;
+        margin: 0 12px;
+        font-size: 0;
+        line-height: 6px;
+        background: rgba($color: #D8D8D8, $alpha: .4);
+        &.on {
+          background: $blue;
+        }
+      }
+    }
+  }
+  .bd {
+    .items {
+      overflow: hidden;
+      .item {
+        border: 1px solid rgba($color: #C6C5D0, $alpha: .61);
+        margin: 0 10px;
+        box-shadow: none;
+      }
+    }
+  }
+}
+// swiper end
+
+
+// 底部蓝色条 start
+.consulting {
+  padding: 40px 10%;
+  text-align: center;
+  background-color: $blue;
+  p {
+    color: $white;
+    font-size: 28px;
+  }
+  .btn {
+    margin: 30px auto 0;
+    @extend %buttonWhite;
+    transition: transform 500ms;
+    &:hover {
+      transform: translateY(-8px);
+    }
+  }
+}
+// 底部蓝色条 end
+
+@media screen and (max-width:1100px){
+  .w1200 {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .items {
+    .item {
+      // width: 48.5%;
+    }
+    &.itemsA {
+      .item {
+        padding: 0 20px;
+        .pic {
+          width: 30%;
+        }
+      }
+    }
+    &.itemsB {
+      .item {
+        width: 48.5%;
+      }
+    }
+    &.itemsD {
+      .item {
+        width: 220px;
+      }
+    }
+  }
+  .itemsB {
+    &-lc {
+      justify-content: space-between;
+      .item {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .swiper-wrap {
+    .items {
+      .item {
+        width: 30%;
+      }
+    }
+  }
+  .consulting {
+    padding: 40px 10%;
+    text-align: center;
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+
+@media screen and (max-width:800px){
+  .w1200 {
+    padding: 0 15px;
+  }
+  .detail-item {
+    .items-tit {
+      width: 98%;
+      line-height: 36px;
+    }
+  }
+  .items {
+    &.itemsA {
+      &-btn {
+        .text {
+          display: initial;
+          .btn {
+            display: block;
+            margin: 20px 0 0; 
+          }
+        }
+        .tips {
+          text-align: left;
+        }
+      }
+    }
+    &.itemsB {
+      &-vertical {
+        .item {
+          width: 100%;
+        }
+      }
+    }
+    &.itemsD {
+      width: 100%;
+      justify-content: space-between;
+      .item {
+        width: 48.5%;
+        max-width: 220px;
+        margin: 0 0 20px;
+        .pic {
+          height: auto;
+        }
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+    &.itemsI {
+      .item {
+        margin: 0 auto 30px;
+      }
+    }
+  }
+
+  .main-tabs ul {
+    flex-wrap: wrap;
+    li {
+      width: 50%;
+      flex: auto;
+    }
+  }
+  .main-tabcon {
+    width: 100%;
+  }
+  .main-item {
+    width: 100%;
+    .tabcon-title {
+      padding: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 2;
+    }
+  }
+  
+  .sub-tabs {
+    width: 40%;
+    li {
+      padding-left: 5px;
+      line-height: 2;
+    }
+  }
+  .sub-tabcon {
+    width: 60%;
+    padding: 10px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width:378px){
+  .items {
+    .item {
+      width: 100%;
+    }
+    &.itemsA {
+      .pic {
+        display: none;
+      }
+      .info {
+        margin: 0;
+      }
+      &-btn {
+        padding-right: 0;
+      }
+    }
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul, li {
+  list-style: none;
+}

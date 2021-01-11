@@ -1,7 +1,4 @@
 .gitigore
-webpack.config.js
-*.json
-/src
 *.rar
 *.zip
 *.sh
@@ -9,9 +6,7 @@ webpack.config.js
 node_modules
 .sass-cache
 *.txt
-/scss
 test.html
-.gitignore
 .gitignore.swp
 *.swp
 .git

@@ -1,0 +1,70 @@
+.icon {
+  display: inline-block;
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.icon-arrow, .icon-arrow-blue {
+  height: 14px;
+  width: 18px;
+}
+.icon-arrow {
+  background-image: url("../image/common/icon-arrow.png")
+}
+.icon-arrow-blue {
+  background-image: url("../image/common/icon-arrow-blue.png")
+}
+
+.icon-bubble,.icon-bubble-blue {
+  height: 17px;
+  width: 18px;
+}
+.icon-bubble {
+  background-image: url("../image/common/icon-bubble.png")
+}
+.icon-bubble-blue {
+  background-image: url("../image/common/icon-bubble-blue.png")
+}
+
+.icon-calendar {
+  height: 14px;
+  width: 14px;
+  background-image: url("../image/common/icon-calendar.png")
+}
+
+.icon-tag {
+  height: 14px;
+  width: 14px;
+  background-image: url("../image/common/icon-tag.png")
+}
+
+.icon-more, .icon-more-blue {
+  height: 11px;
+  width: 22px;
+}
+.icon-more {
+  background-image: url("../image/common/icon-more.png")
+}
+.icon-more-blue {
+  background-image: url("../image/common/icon-more-blue.png")
+}
+.icon-arrow-prev, .icon-arrow-next {
+  height: 54px;
+  width: 54px;
+  border-radius: 50%;
+  background-size: 20px;
+  background-position: center center;
+  transition: all 200ms;
+  &:hover {
+    box-shadow: 0px 2px 16px 0px rgba(0, 182, 176, 0.2);
+    transform: translateY(-8px);
+  }
+}
+.icon-arrow-prev {
+  background-image: url("../image/common/icon-arrow-prev.png");
+}
+.icon-arrow-next {
+  background-image: url("../image/common/icon-arrow-next.png");
+}

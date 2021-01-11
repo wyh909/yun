@@ -1,0 +1,44 @@
+{
+  "name": "yun",
+  "version": "1.0.0",
+  "description": "yun@1.0",
+  "main": "none",
+  "repository": "git@github.com:wyh909/yun.git",
+  "author": "wyh909 <wyh909@126.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "autoprefixer": "^9.7.2",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-inline-react-svg": "^1.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "terser-webpack-plugin": "^2.2.1",
+    "url-loader": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "glob": "^7.1.6",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-redux": "^7.2.0",
+    "react-router": "^5.2.0"
+  },
+  "scripts": {
+    "build": "NODE_ENV=prod webpack --config ./webpack.config.js",
+    "dev": "NODE_ENV=dev webpack-dev-server --config ./webpack.config.js"
+  }
+}

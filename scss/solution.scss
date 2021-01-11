@@ -1,0 +1,132 @@
+@import './common/header.scss';
+@import './common/footer.scss';
+@import './common/banner.scss';
+@import './common/common.scss';
+@import './common/icons.scss';
+
+
+.banner-container {
+  height: 730px;
+  @extend %circle;
+  &::after {
+    top: -100%;
+    right: -57%;
+  }
+  .banner-left {
+    padding-top: 160px;
+    h2 {
+      font-size: 36px;
+      line-height: 47px;
+    }
+  }
+  .banner-right {
+    height: 573px;
+    width: 758px;
+    position: absolute;
+    top: 15px;
+    right: -85px;
+    z-index: 2;
+    background: url("../image/solution/banner.png") top right no-repeat;
+    background-size: cover;
+  }
+}
+.detail-container{
+  width: 100%;
+  background: $white;
+  position: relative;
+  text-align: center;
+  z-index: 5;
+  .detail-item {
+    padding: 60px 0;
+    &.bg-blue {
+      background: $bgBlue;
+    }
+    .detail-con {
+      color: $black65;
+      font-size: 20px;
+      text-align: left;
+      line-height: 32px;
+      position: relative;
+      z-index: 6;
+      p {
+        margin-bottom: 18px;
+      }
+    }
+    &.case {
+      overflow: hidden;
+      position: relative;
+      &::before, &::after {
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        background-repeat: no-repeat;
+        z-index: 4;
+      }
+      &::before {
+        width: 864px;
+        top: 0;
+        left: 0;
+        background-image: url("../image/common/bg-left.png");
+        background-size: 100%;
+      }
+      &::after {
+        width: 755px;
+        top: 0;
+        right: 0;
+        background-image: url("../image/common/bg-right.png");
+        background-size: 100%;
+      }
+
+      .itemsA {
+        justify-content: center;
+        text-align: center;
+        .item {
+          min-height: 128px;
+          height: auto;
+          width: 30%;
+        }
+        .pic {
+          display: inline-block;
+          height: 40px;
+        }
+      }
+    }
+    &.product {
+      .detail-con {
+        text-align: center;
+      }
+      a {
+        margin-right: 90px;
+        line-height: 2;
+        white-space: nowrap;
+      }
+    }
+  }
+  .picture {
+    img {
+      width: 100%;
+    }
+  }
+}
+.consulting {
+  padding: 40px 10%;
+  text-align: center;
+  background-color: $blue;
+  p {
+    color: $white;
+    font-size: 28px;
+  }
+  .btn {
+    margin: 30px auto 0;
+    @extend %buttonWhite;
+  }
+}
+
+@media screen and (max-width:1100px){
+  .detail-container .detail-item.case .itemsA {
+    .item {
+      width: 48%;
+    }
+  }
+}

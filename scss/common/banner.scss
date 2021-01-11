@@ -1,0 +1,148 @@
+@import "./base.scss";
+
+.banner-container {
+  padding-top: 90px;
+  background: #F5FCFD;
+  position: relative;
+  .w1200 {
+    position: relative;
+  }
+  .banner-tit {
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: -39px;
+    z-index: 2;
+    box-sizing: border-box;
+    img {
+      height: 100%;
+    }
+  }
+  .banner-con {
+    height: 640px;
+    display: flex;
+    z-index: 3;
+    position: relative;
+  }
+  .banner-left {
+    width: 35%;
+    padding-top: 10%;
+    position: relative;
+    z-index: 4;
+    color: $black85;
+    text-align: left;
+    h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      line-height: 1;
+      span {
+        display: block;
+        color: $black85;
+        font-size: 28px;
+        line-height: 68px;
+      }
+    }
+    h3 {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 50px;
+    }
+    .banner-intra {
+      height: 160px;
+      color: $black65;
+      font-size: 20px;
+      overflow: hidden;
+    }
+    .banner-bottom {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: 73px;
+      left: 0;
+      z-index: 6;
+      .btn {
+        @extend %buttonBlue;
+        transition: transform 500ms;
+        &:hover {
+          transform: translateY(-8px);
+        }
+        &.banner-service {
+          margin-right: 26px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1600px){
+  .banner-container {
+    .banner-left {
+      width: 35%;
+      padding-top: 144px;
+    }
+  }
+}
+
+@media screen and (max-width:1100px){
+  .banner-container {
+    .banner-tit {
+      width: 100%;
+      padding: 0 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+    .banner-left {
+      padding-top: 88px;
+      width: 100%;
+      text-align: center;
+    }
+    .banner-right {
+      top: 0;
+    }
+    .banner-bottom {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width:800px){
+  .banner-container {
+    .banner-left {
+      padding-top: 56px;
+      width: 100%;
+      h2 {
+        font-size: 40px;
+      }
+      h3 {
+        font-size: 32px;
+        margin-bottom: 38px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:378px){
+  .banner-container {
+    .banner-left {
+      padding-top: 28px;
+      h2 {
+        font-size: 36px;
+      }
+      h3 {
+        font-size: 24px;
+      }
+      .banner-intra {
+        font-size: 18px;
+      }
+    }
+  }
+  .banner-right {
+    display: none;
+  }
+}
