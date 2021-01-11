@@ -13,8 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>云智慧-产品中心-监控中心</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/public/asset.css">
-  <link rel="stylesheet" href="css/public/adaption.css">
+  <!-- <link rel="stylesheet" href="css/public/asset.css"> -->
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/product.css">
 </head>
@@ -37,13 +36,13 @@
     <!--页尾结束-->
   </div>
   <script src="js/jquery.min.js"></script>
-  <script src="js/jq.SuperSlide.2.1.1.js"></script>
+  <script src="js/jq.SuperSlide.2.1.3.js"></script>
   <script src="./dist/monitor_center.js"></script>
   <script>
     /* 内层inBox渐显切换，注意titCell、mainCell等不能与外层相同 */
-    $(".inBox").slide({ titCell:".inHd li",mainCell:".inBd" });
-    /* 外层outBox左滚动切换 */
-    $(".outBox").slide({ effect:"leftLoop" ,autoPlay:false});
+    jQuery(".inBox").slide({ titCell:".inHd li",mainCell:".inBd" });
+    // /* 外层outBox左滚动切换 */
+    jQuery(".outBox").slide({effect:"left"});
   </script>
 </body>
 </html>

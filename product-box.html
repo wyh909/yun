@@ -11,10 +11,9 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>云智慧-产品中心-IT服务管理咨询服务</title>
+  <title>云智慧-产品中心-IT监控魔盒</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/public/asset.css">
-  <link rel="stylesheet" href="css/public/adaption.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/product.css">
 </head>
@@ -36,6 +35,14 @@
     <div id="footer"></div>
     <!--页尾结束-->
   </div>
-  <script src="./dist/auto.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jq.SuperSlide.2.1.3.js"></script>
+  <script src="./dist/box.js"></script>
+  <script>
+    /* 内层inBox渐显切换，注意titCell、mainCell等不能与外层相同 */
+    $(".inBox").slide({ titCell:".inHd li",mainCell:".inBd" });
+    /* 外层outBox左滚动切换 */
+    $(".outBox").slide({ effect:"leftLoop" ,autoPlay:false});
+  </script>
 </body>
 </html>
