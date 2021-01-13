@@ -170,12 +170,6 @@
     .main .solution .solution-container .swiper-slide ul li{
         width: 100%;
     }
-    .main .consulting p{
-        font-size: 16px;
-        margin: 0 5%;
-        text-align: left;
-        padding-top: 20px;
-    }
     .main .consulting .consulting_more, .main .consulting .consulting_service{
         font-size: 16px;
     }

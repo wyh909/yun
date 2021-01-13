@@ -61,7 +61,7 @@ const data = {
       "pic": "",
       "name": "业务健康感知",
       "tabcons": {
-        "intra": "",
+        "intra": "面向不同的客户及客户需求，对IT资源按照资源类型等不同维度进行分类与监控",
         "subtabs": [{
           "name": "业务系统健康度实时监控",
           "html": {
@@ -92,7 +92,7 @@ const data = {
       "pic": "",
       "name": "用户体验感知",
       "tabcons": {
-        "intra": "",
+        "intra": "面向不同的客户及客户需求，对IT资源按照资源类型等不同维度进行分类与监控",
         "subtabs": [{
           "name": "基于拨测的用户体验监控",
           "html": {
@@ -111,7 +111,7 @@ const data = {
       "pic": "",
       "name": "问题事件管控",
       "tabcons": {
-        "intra": "",
+        "intra": "面向不同的客户及客户需求，对IT资源按照资源类型等不同维度进行分类与监控",
         "subtabs": [{
           "name": "事件全局管控",
           "html": {

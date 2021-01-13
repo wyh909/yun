@@ -52,7 +52,7 @@ const data = {
       "pic": "",
       "name": "页面性能监控",
       "tabcons": {
-        "intra": "",
+        "intra": "7ⅹ24智能网站监测，全通道秒级故障告警，快速定位问题",
         "subtabs": [{
           "name": "网页整体性能分析",
           "html": {
@@ -89,7 +89,7 @@ const data = {
       "pic": "",
       "name": "API监控",
       "tabcons": {
-        "intra": "",
+        "intra": "7ⅹ24智能网站监测，全通道秒级故障告警，快速定位问题",
         "subtabs": [{
           "name": "可用率和响应时间分析",
           "html": {
@@ -120,7 +120,7 @@ const data = {
       "pic": "",
       "name": "分布式监测网络",
       "tabcons": {
-        "intra": "",
+        "intra": "7ⅹ24智能网站监测，全通道秒级故障告警，快速定位问题",
         "subtabs": [{
           "name": "大陆电信",
           "html": {

@@ -12,11 +12,25 @@ $black: #000;
 $black65: rgba($color: $black, $alpha: .65);
 $black85: rgba($color: $black, $alpha: .85);
 $blue: #1BD1D1;
+$light-blue: rgba($color: $blue, $alpha: 0.06);
+$dark-blue: rgba($color: $blue, $alpha: 0.12);
 $white: #fff;
 $gray: #757575;
 $gray-smoke: #595959;
 
 $bgBlue: #F5FCFD;
+
+$font48: 48px;
+$font36: 36px;
+$font32: 32px;
+$font28: 28px;
+$font24: 24px;
+$font22: 22px;
+$font20: 20px;
+$font18: 18px;
+$font16: 16px;
+$font14: 14px;
+$font12: 12px;
 
 $cols: 100%;
 $cols2-l: 586px;
@@ -27,25 +41,29 @@ $cols5: 224px;
 
 
 %button {
-  display: inline-block;
+  display: block;
   width: 144px;
   height: 44px;
   text-align: center;
   line-height: 44px;
   border-radius: 22px;
-  font-size: 18px;
+  font-size: $font18;
   font-weight: 600;
-  vertical-align: middle;
+  cursor: pointer;
   span {
     margin-right: 12px;
   }
   i {
-    font-size: 16px;
+    font-size: $font16;
     vertical-align: middle;
   }
   transition: transform 500ms;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   &:hover {
-    transform: translateY(-8px);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateY(-8px) translate3d(0,0,0);
   }
 }
 %buttonBlue {
@@ -115,4 +133,16 @@ $cols5: 224px;
 @media screen and (max-width:378px){
   $cols2: 98%;
   $cols3: 98%;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

@@ -1,5 +1,6 @@
 const data = {
   "banner": {
+    "bannerClass": "banner-product",
     "title": '智能分析',
     "intra": '以工程化的算法能力助力企业AIOps场景落地实施',
   },

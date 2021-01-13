@@ -8,10 +8,14 @@ class TabModule extends Component{
       <div className="outBox">
         { this.renderTabs('main', maintabs) }
         <div className="main-tabcon">
-          <div className="bd">
+          <div className="bd aaa">
           {
             maintabs.map((maintab, index) => {
-              return <Fragment key={`_maintab_${index}`}>{this.renderTabcon( maintab.tabcons)}</Fragment>
+              return (
+                <Fragment key={`_maintab_${index}`}>
+                  {this.renderTabcon( maintab.tabcons)}
+                </Fragment>
+              )
             })
           }
           </div>
@@ -44,8 +48,8 @@ class TabModule extends Component{
     const { intra, subtabs } = tabcon
     return (
       <div className="main-item inBox">
-        {/* <div className="tabcon-title"> { intra } </div> */}
-        <div className="tabcon-con">
+        <div className="tabcon-title"> { intra } </div>
+        <div className={classnames("tabcon-con", subtabs.length > 5 ? 'h500' : '')}>
           
           { this.renderTabs(false, subtabs) }
           <div className="sub-tabcon inBd">
@@ -58,13 +62,13 @@ class TabModule extends Component{
                     <li className={classnames("sub-item", isTextArray ? 'sub-item-span' : '')}>
                     {
                       html.pic ? (
-                        <img src={ html.pic } />
+                        <div className="pic"><img src={ html.pic } /></div>
                       ) : null
                     } 
                     {
                       isTextArray ? html.text.map((t, index) => {
                         return <span key={`_span_t_${index}`}>{t}</span>
-                      }) : <p>{ html.text }</p>
+                      }) : <p className="text">{ html.text }</p>
                     }
                     </li>
                   </ul>

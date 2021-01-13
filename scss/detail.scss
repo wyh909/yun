@@ -32,14 +32,14 @@
     .news-title {
       margin-bottom: 27px;
       color: $black85;
-      font-size: 28px;
+      font-size: $font28;
       font-weight: 600;
       text-align: center;
     }
     .news-subtitle {
       margin-bottom: 66px;
       color: $black65;
-      font-size: 14px;
+      font-size: $font14;
       text-align: center;
       .icon {
         margin-right: 8px;
@@ -50,7 +50,7 @@
     }
     .news-content {
       color: $black65;
-      font-size: 20px;
+      font-size: $font20;
       line-height: 32px;
       p {
         padding-bottom: 18px;
@@ -69,18 +69,10 @@
   }
 }
 
-@media screen and (max-width: 378px) {
-  .detail .banner-container {
-    &::after {    
-      top: -20%;
-      right: -40%;
+@media screen and (max-width: 960px) {
+  .banner-container {
+    .banner-bottom {
+      bottom: 0;
     }
-    .banner-tit {
-      width: 100%;
-      img {
-        height: 88px;
-        width: auto;
-      }
-    }
-  } 
+  }
 }

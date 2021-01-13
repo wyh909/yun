@@ -49,7 +49,7 @@ const data = {
       "pic": "",
       "name": "移动端性能管理",
       "tabcons": {
-        "intra": "",
+        "intra": "追踪性能问题，快速定位应用缓慢、错误和异常，确保业务质量",
         "subtabs": [{
           "name": "用户行为分析",
           "html": {
@@ -92,7 +92,7 @@ const data = {
       "pic": "",
       "name": "浏览器&小程序性能管理",
       "tabcons": {
-        "intra": "",
+        "intra": "追踪性能问题，快速定位应用缓慢、错误和异常，确保业务质量",
         "subtabs": [{
           "name": "全景地图分析",
           "html": {

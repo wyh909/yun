@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import classnames from 'classnames'
 
 class Banner extends Component {
   render() {
-    const { pic_title = 'image/product/title.png', title, sub_title, intra, btns=[], pic_banner } = this.props
+    const { bannerClass='banner-product', pic_title = 'image/product/title.png', title, sub_title, intra, btns=[], pic_banner="image/product/banner.png" } = this.props
     return (
-      <div className="banner-container">
+      <div className={classnames("banner-container", bannerClass)}>
         <div className="w1200">
           <div className="banner-tit">
             <img src={pic_title} alt="云智慧" className="banner" />
@@ -32,14 +33,9 @@ class Banner extends Component {
                 </a>
               </div>
             </div>
-            {
-              pic_banner ? (
-                <div className="banner-right" style={{backgroundImage: `url(${pic_banner})`}}></div>
-              ) : (
-                <div className="banner-right"></div>
-              )
-            }
-            
+            <div className="banner-right">
+              <img src={pic_banner} />
+            </div>
           </div>
         </div>
       </div>

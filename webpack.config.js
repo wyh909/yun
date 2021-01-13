@@ -6,6 +6,7 @@ const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const packagejson = require('./package.json')
 
 const baseConfig = {
   rootPath: __dirname,
@@ -16,9 +17,16 @@ const prodConfig = {
 }
 const isDev = process.env.NODE_ENV === 'dev'
 const entries = getEntry('./src/**/index.js')
+entries.vendor = ['react', 'react-dom', 'classnames']
+// entries.product = path.resolve(baseConfig.srcPath, 'product.js')
 module.exports = {
   mode: isDev ? 'development' : 'production',
-  entry: entries,
+  entry: 
+  // {
+  //   "vendor": Object.keys(packagejson.dependencies),
+  //   'product': path.resolve(baseConfig.srcPath, 'product.js')
+  // },
+  entries,
   // {
   //   monitorCenter: `${baseConfig.srcPath}/monitor-center/index.js`,
   //   itConsult: `${baseConfig.srcPath}/it-consult/index.js`,
@@ -40,7 +48,17 @@ module.exports = {
         sourceMap: isDev
       }),
       !isDev && new OptimizeCSSAssetsPlugin()
-    ].filter(Boolean)
+    ].filter(Boolean),
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /react/,
+          name: 'vendor',
+          chunks: 'initial'
+        }
+      }
+    }
+
   },
   module: {
     rules: [
@@ -131,8 +149,9 @@ module.exports = {
       filename: '[name].css'
     }),
     isDev && new webpack.NamedModulesPlugin(),
-    isDev && new webpack.HotModuleReplacementPlugin()
+    isDev && new webpack.HotModuleReplacementPlugin(),
   ].filter(Boolean),
+
   devServer: {
     contentBase: './',
     disableHostCheck: true,
@@ -146,6 +165,9 @@ module.exports = {
       image: path.relative(baseConfig.rootPath, './image'),
       scss: path.resolve(baseConfig.rootPath, './scss')
     }
+  },
+  externals: {
+
   }
 }
 
