@@ -546,19 +546,19 @@
       @extend %box;
       width: 60%;
       margin-top: 112px;
-      padding: 65px 0 65px 70px;
+      padding: 30px;
       float: right;
       overflow: hidden;
       h4 {
         color: $black;
-        font-size: $font32;
+        font-size: $font24;
         line-height: 32px;
         margin-bottom: 30px;
       }
       li {
         color: $black65;
-        font-size: $font24;
-        line-height: 60px;
+        font-size: $font16;
+        line-height: 32px;
       }
     }
     &:first-child {
@@ -892,19 +892,6 @@ $border: 1px solid rgba($color: #C6C5D0, $alpha: .61);
 }
 // 底部蓝色条 end
 
-@media screen and (max-width:1100px){
-  
-  .itemsB {
-  }
-
-  .swiper-wrap {
-    .items {
-      .item {
-        width: 30%;
-      }
-    }
-  }
-}
 
 @media screen and (max-width: 960px) {
   .w1200 {
@@ -936,6 +923,22 @@ $border: 1px solid rgba($color: #C6C5D0, $alpha: .61);
           margin-right: 0;
           margin-left: 0;
         }
+      }
+    }
+    &.itemsC {
+      .item {
+        margin: 0 10px;
+      }
+      .pic {
+        height: 80px;
+        width: 80px;
+        margin-bottom: 20px;
+      }
+      h4 {
+        font-size: $font16;
+      }
+      .text {
+        font-size: $font14
       }
     }
     &.itemsD {
@@ -976,6 +979,14 @@ $border: 1px solid rgba($color: #C6C5D0, $alpha: .61);
     width: 60%;
     padding: 10px;
   }
+
+  .swiper-wrap {
+    .items {
+      .item {
+        width: 30%;
+      }
+    }
+  }
   .consulting {
     text-align: center!important;
     p {
@@ -985,17 +996,23 @@ $border: 1px solid rgba($color: #C6C5D0, $alpha: .61);
 }
 
 
-@media screen and (max-width:800px){
+@media screen and (max-width:750px){
   .w1200 {
     padding: 0 15px;
   }
   .detail-item {
+    padding: 50px 0 30px;
     .items-tit {
       width: 98%;
       line-height: 36px;
     }
+    h3 {
+      padding-bottom: 16px;
+      font-size: 30px;
+    }
   }
   .items {
+    padding-top: 30px;
     &.itemsA {
       &-btn {
         .text {

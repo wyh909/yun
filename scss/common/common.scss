@@ -106,6 +106,36 @@
   }
 }
 
+.case {
+  overflow: hidden;
+  position: relative;
+  &::before, &::after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  &::before {
+    width: 864px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-100%);
+    background-image: url("../image/common/bg-left.png");
+    background-position: top left;
+    background-size: 100%;
+  }
+  &::after {
+    width: 755px;
+    top: 0;
+    right: 50%;
+    transform: translateX(100%);
+    background-image: url("../image/common/bg-right.png");
+    background-position: top right;
+    background-size: 100%;
+  }
+}
 // 底部蓝色条 start
 .consulting {
   padding: 40px 10%;
@@ -139,6 +169,17 @@
     text-align: center!important;
     p {
       font-size: $font18;
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .moduleA {
+    h3 {
+      padding-bottom: 16px;
+      font-size: 30px;
+    }
+    .detail-con {
+      padding: 30px 0 50px;
     }
   }
 }

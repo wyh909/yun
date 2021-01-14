@@ -15,7 +15,7 @@
     }
   }
   h2, h3, .banner-intra {
-    text-shadow: 2px 2px 2px $white;
+    // text-shadow: 2px 2px 2px $white;
   }
 }
 
@@ -68,6 +68,7 @@
 // 详情页开始
 .detail {
   .banner-container {
+    height: auto;
     background: $white;
     @extend %circle;
     .banner-tit {
@@ -97,6 +98,8 @@
         margin-bottom: 27px;
       }
       .banner-bottom {
+        position: relative;
+        bottom: 0;
         margin-bottom: 101px;
         justify-content: center;
         .btn {
@@ -129,58 +132,12 @@
 }
 // 详情页结束
 
-
-@media screen and (max-width:1100px){
-  .customer-top {
-    padding: 0 5%;
-    .box {
-      width: 100%;
-      margin: 37px auto 30px;
-      padding: 20px 25px;
-      img {
-        width: 40px;
-      }
-    }
-  }
-  .case {
-    &::before, &::after {
-      display: none;
-    }
-    .case-items {
-      padding: 0 5%;
-      .item {
-        width: 48.5%;
-        padding: 15px 27px 26px 15px;
-      }
-    }
-  }
-
-  .detail {
-    .banner-container {
-      .banner-left {
-        width: 100%;
-        text-align: center;
-        h3 {
-          font-size: $font22;
-        }
-        h2 {
-          font-size: $font36;
-        }
-      }
-    }
-    .detail-container {
-      padding: 0 5%;
-      h3 {
-        font-size: $font22;
-      }
-      .detail-con {
-        font-size: $font16;
-      }
-    }
-  }
-}
-
 @media screen and (max-width:960px){
+  .w1200 {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
   .banner-container {
     .banner-right {
       margin-top: 20px;
@@ -199,24 +156,10 @@
 }
 
 @media screen and (max-width:378px){
-  .customer-top .box {
-    margin: 37px auto 15px;
-  }
-  .case {
-    .case-items {
-      .item {
-        height: 300px;
-        width: 48.5%;
-      }
-    }
-  }
-  .detail {
-    .banner-container {
-      .banner-left {
-        h2 {
-          font-size: $font32;
-        }
-      }
+  .customer-top .customer-wrap {
+    display: block;
+    img {
+      margin-bottom: 20px;
     }
   }
 }
